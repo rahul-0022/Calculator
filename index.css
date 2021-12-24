@@ -2,6 +2,7 @@ body,
 html {
     margin: 0px;
     padding: 0px;
+    background: #d90000;
 }
 
 .container {
@@ -37,4 +38,9 @@ button {
 
 table {
     margin: auto;
+}
+
+h1 {
+    color: white;
+    font-family: 'Pushster', cursive;
 }
