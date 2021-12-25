@@ -1,6 +1,7 @@
 let result = document.getElementById('result');
 buttons = document.querySelectorAll('button');
 let resultValue = '';
+let brackertSiwtch = false;
 for (item of buttons) {
     item.addEventListener('click', (e) => {
         buttonText = e.target.innerText;
@@ -21,6 +22,15 @@ for (item of buttons) {
             result.value = resultValue;
         } else if (buttonText == '=') {
             result.value = eval(resultValue);
+        } else if (buttonText == '( )') {
+            var prac;
+            if (!bracketSwitch) {
+                prac = "("
+            } else {
+                prac = ")"
+            };
+            bracketSwitch = !bracketSwitch;
+            document.getElementById("result").value += prac;
         } else {
             resultValue += buttonText;
             result.value = resultValue;
